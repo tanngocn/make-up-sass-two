@@ -1,0 +1,297 @@
+header.header {
+
+    & .nav {
+        height: 7rem;
+        display: flex;
+        align-items: center;
+        background-color: #6b9876;
+        position: relative;
+        padding: 1rem;
+
+        @include response(sm) {
+            height: 5rem;
+
+        }
+
+        &::before {
+            @include bgBottom();
+
+            @include response(sm) {
+                display: none;
+            }
+        }
+
+        & .container {
+
+            & .nav-header {
+                @include flexPosition(flex-start, center);
+                position: relative;
+
+                @include response(md) {
+                    @include flexPosition(space-between);
+                    max-width: 100%;
+                }
+
+                &__logo {
+                    max-width: 10rem;
+                    max-height: 10rem;
+                    display: block;
+                    background-color: #ffff;
+                    padding: .8rem;
+                    margin-right: 3rem;
+                    position: absolute;
+                    top: -.5rem;
+                    transition: .2s;
+                    z-index: 99999;
+
+                    &:hover img {
+                        opacity: .8;
+                    }
+
+                    img {
+                        max-width: 100%;
+                    }
+
+                    @include response(md) {
+                        display: none;
+                    }
+
+                    @include response(sm) {
+                        display: none;
+                    }
+                }
+
+                & .btn-toggle-search {
+                    position: relative;
+                    color: white;
+                    z-index: 888888888888;
+                    order: 2;
+                    display: none;
+                    cursor: pointer;
+
+                    @include response(md) {
+                        display: inline-block;
+                    }
+                }
+
+                // nav-header__cate
+                &__cate {
+                    position: relative;
+                    margin: 0 2.2rem;
+                    padding-left: 10rem;
+
+                    @include response(md) {
+                        padding-left: 0;
+                        position: relative;
+                        margin: 0;
+
+                    }
+
+                    @include response(sm) {
+                        padding-left: 0;
+                        margin: 0;
+                    }
+
+
+                    &:hover ul.cate-list {
+                        opacity: 1;
+                        visibility: visible;
+
+                    }
+
+                    &.end {
+                        padding-left: 0;
+
+                        .nav-btn {
+                            @include response(md) {
+
+                                display: none;
+                            }
+
+                            @include response(sm) {
+
+                                display: none;
+                            }
+                        }
+                    }
+
+                    & .nav-btn {
+                        @include flexPosition(space-between, center);
+                        padding: .6rem 1.5rem .6rem 1.5rem;
+                        font-size: 1.5rem;
+                        color: color(white);
+                        background-color: color(btn-primary);
+                        border: none;
+                        height: 3.2rem;
+                        transition: .2s ease-in-out;
+
+                        @include response(md) {
+                            background-color: color(secondary);
+                            padding: 0;
+                        }
+
+                        @include response(sm) {
+                            background-color: color(secondary);
+                            padding: 0;
+                        }
+
+                        .text {
+                            @include response(md) {
+                                display: none;
+                                padding: 0;
+                            }
+
+                            @include response(sm) {
+                                display: none;
+                                padding: 0;
+                            }
+
+                        }
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        span.toggle-block {
+                            @extend %span.toggle-block;
+                        }
+                    }
+
+                    & ul.cate-list {
+                        position: absolute;
+                        width: 60rem;
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        background-color: color(btn-primary);
+                        padding: 3rem;
+                        transition: .2s ease-in-out;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: 99999;
+                        box-shadow: 0 8px 15px 0 rgba(107, 152, 118, .4);
+
+                        @include response(md) {
+                            display: none;
+                        }
+
+                        @include response(sm) {
+                            display: none;
+                        }
+
+
+                        &>li {
+                            list-style: none;
+
+                            &>a {
+                                color: color(white);
+                                font-size: 1.5rem;
+                                text-decoration: none;
+                                font-family: $font-primary;
+                                line-height: 2rem;
+                                display: inline-block;
+                                width: 100%;
+                                padding: 1rem;
+                                border-bottom: .1rem solid rgba(132, 184, 144, .6);
+                                white-space: nowrap;
+                                transition: .2s;
+                                text-transform: capitalize;
+
+                                &:hover {
+                                    background-color: color(color-hover);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // end nav-header__cate
+                &__collapse {
+                    flex: 1;
+                    @include flexPosition(flex-end, center);
+
+                    @include response(md) {
+                        display: none;
+                    }
+
+                    @include response(sm) {
+                        display: none;
+                    }
+
+                    & ul.nav-right {
+                        @include flexPosition(flex-start);
+                        margin-bottom: 0;
+                        list-style: none;
+
+                        & li {
+                            margin: 0 2rem;
+
+                            & .search-block {
+                                @include flexPosition(flex-start);
+                                max-width: 30rem;
+                                height: 4rem;
+
+                                input {
+                                    max-height: 100%;
+                                    width: 20rem;
+                                    padding: .6rem 1.2rem;
+                                    height: 4rem;
+                                    border: none;
+                                    color: #555;
+                                    display: block;
+                                    font-size: 1.4rem;
+
+                                    &:focus {
+                                        outline: none
+                                    }
+                                }
+
+                                button {
+                                    @include flexPosition();
+                                    width: 4rem;
+                                    height: 4rem;
+                                    border: none;
+                                    background-color: white;
+                                    text-align: center;
+                                    line-height: 4rem;
+                                    box-sizing: border-box;
+                                }
+                            }
+
+                            & .user-block {
+                                @include flexPosition();
+                                color: color(white);
+
+                                i {
+                                    margin-right: 1rem;
+                                }
+
+                                a {
+                                    text-decoration: none;
+                                    opacity: .8;
+                                    color: inherit;
+                                    font-size: 1.5rem;
+                                    line-height: 2.4rem;
+
+                                    &:hover {
+                                        opacity: 1;
+                                    }
+                                }
+
+                                span {
+                                    font-size: 1.5rem;
+                                    color: inherit;
+                                    margin: 0 1rem;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}

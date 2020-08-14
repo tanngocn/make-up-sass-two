@@ -1,0 +1,56 @@
+.rank-block {
+
+    padding-top: 3rem;
+
+    .heading {
+        border-bottom: .1rem solid color(border-bottom);
+       
+        h2 {
+            line-height: 7.4rem;
+            @extend .title;
+            display: block;
+
+            i {
+                margin-right: 1.5rem;
+                float: left;
+            }
+        }
+    }
+
+    ul {
+        display: block;
+
+        li {
+            list-style: none;
+            border-bottom: .1rem dashed color(border-bottom);
+            position: relative;
+            
+            .content {
+                font-size: 1.6rem;
+                padding-left: 4rem;
+                @include flexPosition(flex-start);
+
+                .name {
+                    h3 {
+                        margin: 0;
+
+                        a {
+                            display: block;
+                            padding: 1rem 0;
+                            font-size: 1.6rem;
+                            color: color(text-reading);
+                            transition: color .2s;
+                            text-decoration: none;
+                            text-transform: capitalize;
+
+                            &:hover {
+                                color: color(secondary);
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

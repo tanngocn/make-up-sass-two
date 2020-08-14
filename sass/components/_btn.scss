@@ -1,0 +1,64 @@
+%btn {
+    font-size: 1.4rem;
+    background-color: color(secondary);
+    color: color(white);
+    -webkit-box-shadow: 0 3px 4px 0 rgba(107, 152, 118, .3);
+    -moz-box-shadow: 0 3px 4px 0 rgba(107, 152, 118, .3);
+    box-shadow: 0 3px 4px 0 rgba(107, 152, 118, .3);
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    display: inline-block;
+    padding: .6rem 1.2rem;
+    text-decoration: none;
+
+    &:hover {
+        background-color: color(secondary-bold);
+    }
+
+}
+
+%pull-right {
+    display: block;
+    text-align: right;
+    padding: 1rem 1rem 0 0;
+}
+
+%a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color .2s;
+
+    &:hover {
+        color: color(color-link)
+    }
+}
+
+.btn-form,
+%btn-form {
+    width: 100%;
+    border: none;
+    font-size: 1.6rem;
+    padding: .6rem 1.2rem;
+    color: color(white);
+    height: 4rem;
+    @include flexPosition();
+
+    &--primary {
+        background-color: color(secondary);
+
+        &:hover {
+            background-color: #557B5E;
+        }
+    }
+
+    &--secondary {
+        background-color: color(btn-blue);
+
+        &:hover {
+            background-color: #2b4275;
+        }
+    }
+
+}

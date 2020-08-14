@@ -1,0 +1,44 @@
+ul.pagination {
+
+    @include flexPosition(flex-end);
+    margin: 1rem 0;
+
+    &>li {
+        list-style: none;
+        width: 3.3rem;
+        height: 3.3rem;
+        text-align: center;
+        line-height: 3.3rem;
+        
+        a {
+            font-size: 1.4rem;
+            color: color(secondary);
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: .05rem solid color(text-secondary);
+
+        }
+
+
+
+        &.active {
+            background-color: color(secondary);
+
+            a {
+                background-color: color(secondary);
+
+                color: color(white);
+            }
+        }
+    }
+
+    .btn--next {
+        border-radius: 0rem .3rem .3rem 0rem;
+    }
+
+    .btn--prev {
+        border-radius: .3rem 0 0 .3rem;
+    }
+}

@@ -1,0 +1,99 @@
+.recommend {
+  background-color: color(white);
+  position: relative;
+
+  @include response(md) {
+    margin: 3rem 0;
+  }
+
+  @include response(md) {
+    margin: .5rem 0;
+  }
+
+  &__heading {
+    h2 {
+      padding: 2rem 0;
+      @extend %h2;
+      color: color(secondary);
+      padding-left: 2rem;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 0;
+    width: .1rem;
+    border-left: .1rem solid #eee;
+  }
+
+  & ul {
+    margin-bottom: 0;
+    padding: 1rem 1.5rem 0;
+    font-size: 1.6rem;
+
+    li {
+      list-style: none;
+      min-height: 4rem;
+
+      & .content {
+        @include flexPosition(flex-start, flex-start);
+        border-bottom: 1px dashed #eee;
+        padding: .8rem 0 .9rem 3rem;
+        position: relative;
+        font-size: 1.6rem;
+        margin: 0;
+
+        &.choice {
+          @extend .index-one;
+
+          & .thumb {
+
+            @extend .thumb-3d;
+
+          }
+
+        }
+
+        & .index {
+          @extend %index;
+        }
+
+        & .index.index-1,
+        .index.index-2,
+        .index.index-3 {
+          color: color(white);
+          margin-right: 1rem;
+        }
+
+        & .info {
+          @include flexPosition(space-between);
+          width: 100%;
+
+          & h3 {
+            @extend %h3,
+            %h3--overflow;
+            margin: 0;
+            max-width: 20rem;
+
+            @include response(md) {
+              max-width: 38rem;
+            }
+
+            @include response(sm) {
+              max-width: 18rem;
+            }
+          }
+
+          & .view {
+            font-size: 1.4rem;
+            color: color(text-secondary);
+          }
+        }
+
+      }
+    }
+  }
+}

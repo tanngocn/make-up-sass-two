@@ -1,0 +1,72 @@
+%ul, .ul-slide {
+    display: block;
+
+
+    &>li {
+        list-style: none;
+        @include flexPosition(flex-start);
+        padding: 1rem 6rem 1rem 0rem;
+        border-bottom: .1rem dashed #eee;
+        position: relative;
+
+        & .heading {
+            font-size: 1.4rem;
+            margin-left: 1rem;
+            border-bottom: none;
+            padding-left: 3rem;
+
+            h4 {
+                a {
+                    color: color(text-reading);
+                    line-height: 2rem;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: color(primary);
+                    }
+                }
+            }
+
+            span {
+                color: color(text-primary);
+            }
+        }
+
+        a {
+            img {
+                min-width: 3rem;
+                max-height: 4.5rem;
+                margin-right: 2rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include response(md) {
+                    min-width: 4rem;
+                    max-height: 4rem;
+                }
+
+                @include response(sm) {
+                    min-width: 3rem;
+                    max-height: 4.5rem;
+
+                }
+            }
+        }
+
+
+
+        .link {
+            @extend %a;
+            color: color(primary);
+            position: absolute;
+            right: 0;
+
+            &:hover {
+                color: color(text-reading);
+            }
+        }
+
+    }
+
+}

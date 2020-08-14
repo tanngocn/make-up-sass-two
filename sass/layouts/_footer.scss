@@ -1,0 +1,80 @@
+footer {
+    border-top: .4rem solid #efefef;
+    padding: 3rem 0 10rem;
+
+    @include response(md){
+        padding: 3rem 0 2rem;
+    }
+
+    .heading {
+        margin-bottom: 3rem;
+
+        h4 {
+            @extend %h4;
+            position: relative;
+
+            &::after {
+                @include afterBeforeBL("", -1.2);
+                width: 3rem;
+                height: .2rem;
+
+                background-color: color(primary);
+            }
+        }
+    }
+
+    .content {
+        p {
+            font-size: 1.4rem;
+            color: color(text-reading);
+
+            a {
+                color: color(primary);
+                @extend %a;
+
+                &:hover {
+                    color: color(text-reading);
+                }
+            }
+        }
+    }
+
+    ul {
+        li {
+            list-style: none;
+            position: relative;
+
+            a {
+                @include flexPosition(flex-start);
+                position: relative;
+                padding: .6rem 0 .6rem 2.5rem;
+
+                @extend %a;
+                color: color(text-reading);
+                transition: .2s;
+
+                &:hover {
+                    color: color(primary);
+                    text-decoration: none;
+                }
+
+                .block-icon {
+                    position: absolute;
+                    top: 0%;
+                    left: 0rem;
+                    bottom:0;
+                    margin: auto;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    text-align: center;
+                }
+
+                span {
+                    margin-left: 1rem;
+                }
+
+
+            }
+        }
+    }
+}

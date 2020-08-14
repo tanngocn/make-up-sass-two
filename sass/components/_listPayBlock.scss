@@ -1,0 +1,64 @@
+.list-pay {
+    padding-top: 3rem;
+
+    @include response(md) {
+        margin: 2rem 0;
+    }
+
+    .item {
+        @include flexPosition(center, flex-start);
+        margin: 1rem 0 1rem;
+
+        @include response(md) {
+            @include flexPosition(flex-start, flex-start);
+        }
+        @include response(md) {
+            @include flexPosition(flex-start, flex-start);
+            flex-wrap: wrap;
+        }
+
+        & img {
+            max-height: 12rem;
+            max-width: 8rem;
+            margin-right: 1.5rem;
+
+            @include response(md) {
+                max-height: 16rem;
+                max-width: 12.5rem;
+                margin-right: .5rem;
+            }
+
+            @include response(sm) {
+                max-height: 24rem;
+                max-width: 16rem;
+                margin-right: 0rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .info {
+            font-size: 1.4rem;
+            text-transform: capitalize;
+
+            h4 {
+                font-weight: 600;
+
+                a {
+                    @extend %a;
+                    color: color(text-reading);
+                    font-size: 1.4rem;
+
+                    &:hover {
+                        color: color(primary);
+                    }
+                }
+            }
+
+            .cate {
+                font-size: 1.3rem;
+                color: color(text-primary);
+            }
+        }
+
+    }
+}

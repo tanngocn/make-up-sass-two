@@ -1,0 +1,54 @@
+// bootstrap
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import  "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+ 
+// abstracts
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+// base
+@import "./base/base";
+
+//components
+@import "./components/btn";
+@import "./components/heading";
+@import "./components/toggleIcon";
+@import "./components/ul";
+@import "./components/backTopBtn";
+@import "./components/icon";
+@import "./components/bookThumb";
+@import "./components/indexOne";
+@import "./components/slidesblock";
+@import "./components/topStoryItem";
+@import "./components/blockHeading";
+@import "./components/listPayBlock";
+@import "./components/blockEditor";
+@import "./components/slidesHasDot";
+@import "./components/updateStory";
+@import "./components/rankBlock";
+@import "./components/pagination";
+@import "./components/searchBlockToggle";
+@import "./components/sidebar"; 
+// 
+@import "./components/filterPage/categori";
+@import "./components/filterPage/item"; 
+//
+
+@import "./components/form/style";
+
+// layouts
+@import "./layouts/header";
+@import "./layouts/footer";
+
+// layouts -> homepage
+@import "./layouts/homePage/topStory";
+@import "./layouts/homePage/feature";
+@import "./layouts/homePage/updateOrReading";
+@import "./layouts/homePage/storyPay";
+
+//layouts -> rank
+@import "./layouts/raitingPage/rank";

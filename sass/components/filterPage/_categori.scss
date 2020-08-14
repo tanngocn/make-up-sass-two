@@ -1,0 +1,22 @@
+button.btn--cate {
+    display: inline-block;
+    border: none;
+    margin: .2rem 0.2rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border: .1rem solid color(secondary);
+    padding: .2rem .5rem;
+    border-radius: .4rem;
+    color: color(secondary);
+    text-transform: capitalize;
+}
+
+button.btn--cate:focus {
+    outline: none;
+}
+
+button.btn--cate.active {
+    background-color:color(secondary);
+    color: color(white);
+   
+}

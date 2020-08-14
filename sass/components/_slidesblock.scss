@@ -1,0 +1,148 @@
+.slide-block {
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem -1rem rgb(31, 30, 30);
+    padding: 3rem 0 1.5rem;
+
+    @include response(md) {
+        margin: 3rem 0;
+    }
+
+    & .heading {
+        border-bottom: none;
+        margin-bottom: 2rem;
+        position: relative;
+
+        .glide__slide {
+            margin: 0 .6rem;
+            transition: .5s;
+            opacity: .6;
+            transform: scale(.9);
+
+            img {
+                max-height: 24rem;
+                min-width: 17rem;
+                transition: .5s;
+
+            }
+
+        }
+        .glide__arrow{
+            background-color: color(white);
+        }
+
+        .glide__slide.glide__slide--active {
+            transform: scale(1);
+            opacity: 1;
+
+            img {
+
+                box-shadow: 0 1rem 2rem -1rem color(black);
+            }
+
+        }
+
+
+    }
+
+    .next,
+    .prev {
+        position: absolute;
+        top: 50%;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        line-height: 4rem;
+        border: none;
+        cursor: pointer;
+
+        transition: .2s;
+        @include flexPosition();
+
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            opacity: .8;
+        }
+
+    }
+
+    & .glide__arrow--left {
+
+        i {
+            @extend %icon,
+            %icon-next;
+        }
+    }
+
+    .prev {
+        left: 1rem;
+
+        i {
+            @extend %icon,
+            %icon-prev;
+        }
+    }
+
+    .content.glide__bullets {
+        position: relative;
+        padding: 3rem;
+        @include flexPosition();
+        min-width: 100%;
+        overflow: hidden;
+        max-height: 25rem;
+
+        & .glide__bullet {
+            width: 100%;
+            padding: 0;
+            height: 100%;
+            border-radius: 0;
+            border: none;
+            margin: 0;
+            box-shadow: none;
+            display: none;
+            font-size: 1.4rem;
+            text-align: center;
+            margin-right: 0 .6rem;
+
+            &--active {
+                @include flexPosition(center, center, column);
+
+                h2 {
+                    @extend %h2-slide-sm;
+                    color: color(primary);
+                }
+
+                .view {
+                    font-size: 1.4rem;
+                    margin-bottom: 1rem;
+                    color: color(text-primary);
+                    height: 2rem;
+
+                    span {
+                        @extend %text-red;
+                    }
+                }
+
+                p {
+                    margin-bottom: 1.6rem;
+                    color: color(text-reading);
+                    line-height: 3rem;
+                }
+
+                a {
+                    @extend %btn;
+                    padding: 1.6rem 1.2rem;
+                    display: inline-block;
+                }
+
+            }
+        }
+
+    }
+
+}

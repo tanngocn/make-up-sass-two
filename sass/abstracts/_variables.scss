@@ -1,0 +1,40 @@
+$colors:(
+    primary: #5c8465,
+    secondary: #6b9876,
+    secondary-bold:#557b5e,
+    color-hover:#7fb28b,
+    yellow: #edb800,
+    blue: #0073b9,
+    red: #C12a1c,
+    white: #ffff,
+    btn-primary: #72a17e,
+    btn-blue: #39579a,
+    color-link:#23527c,
+    border-bottom: #ddd,
+    bg-sidebar:#E8EAEE,
+
+    //color text
+    text-primary: #666,
+    text-secondary: #999,
+    text-reading: #333,
+    text-asise: #fc3,
+    raiting-average:#f62929,
+    btn-detail: #f2f7f3,
+    btn-like: "rgba(9, 30, 66)",
+
+    // color converter
+    // text-lv8: "0 0 7px #a94442, 0 0 7px #a94442, 0 0 7px #a94442",
+    text-lv7:#c12a1c,
+    text-lv6:#FFA500,
+    text-lv5: #E2CD19,
+    text-lv4: #008000,
+    text-lv3: #3755d6,
+    text-lv2: #4b0082,
+    text-lv1: #9820d0
+);
+
+$font-primary: source;
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+};

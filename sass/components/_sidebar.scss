@@ -1,0 +1,192 @@
+.sidebar {
+
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 33.33333%;
+    min-height: 100%;
+    z-index: 9999999999;
+    background-color: color(bg-sidebar);
+    transition: .4s;
+    display: none;
+    overflow-y: scroll;
+
+    @include response(md){
+        display:block;
+        width: 33.3333333%;
+    }
+    @include response(sm){
+        width: 65%;
+    }
+
+    &.show {
+        left: 0;
+        @include response(lg){
+            display:none;
+        }
+        button.btn-close-sidebar{
+
+            @include response(md){
+                position: fixed;
+                right: 60%;
+                top: 2rem;
+            }
+            @include response(sm){
+                position: fixed;
+                right: 33%;
+                top: 2rem;
+            }
+        }
+    }
+
+    button.btn-close-sidebar {
+
+        color: color(white);
+        position: absolute;
+        right: -5rem;
+        top: 3rem;
+        width: 4rem;
+        height: 4rem;
+        border: none;
+        background-color: transparent;
+        z-index: 9999999;
+        transition: .4s;
+
+        @include response(md){
+            position: fixed;
+            right: -10rem;
+            top: 2rem;
+        }
+
+        @include response(sm){
+            position: fixed;
+            right: 0rem;
+            top: 2rem;
+        }
+
+        &:focus{
+            outline: none;
+        }
+
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 3rem;
+            left: 0;
+            height: .2rem;
+            background-color: color(white);
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+
+
+&__header {
+
+    background-color: color(secondary);
+    width: 100%;
+    max-height: 20rem;
+    font-size: 1.6rem;
+
+    span {
+        display: block;
+        line-height: 1.6rem;
+        padding: 1.5rem 1.5rem 0;
+    }
+
+    button {
+        @include flexPosition(space-between);
+        color: color(white);
+        font-size: 1.6rem;
+        padding: 1.5rem;
+        background-color: inherit;
+        border: none;
+        width: 100%;
+
+
+        &:focus {
+            outline: none;
+
+
+        }
+
+        &.active {
+            span {
+                transform: rotate(90deg);
+            }
+        }
+
+        span {
+            padding: 0;
+            transition: .2s;
+        }
+    }
+
+    ul {
+        background-color: color(secondary);
+        background-color: #6b9876;
+        width: 100%;
+        height: 0rem;
+        transition: .4s;
+
+        li {
+            list-style: none;
+            border-bottom: .1rem dashed color(border-bottom);
+            padding: 0rem 1.5rem;
+            display: none;
+
+            &:nth-last-of-type(1) {
+                border-bottom: none;
+            }
+
+            a {
+                color: color(white);
+                font-size: 1.6rem;
+                text-decoration: none;
+            }
+        }
+    }
+
+    button.active+ul {
+        height: 10rem;
+        transition: .2s;
+
+        & li {
+            padding: 1.5rem;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+&__menu {
+    .group {
+        margin-bottom: 2rem;
+
+        &__item {
+            background-color: white;
+            padding: 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: .1rem dashed color(border-bottom);
+            color: color(text-reading);
+            text-decoration: none;
+            @include flexPosition(space-between);
+
+            &:nth-last-of-type(1) {
+                border-bottom: none;
+            }
+        }
+    }
+
+}
+}

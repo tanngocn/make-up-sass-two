@@ -1,0 +1,37 @@
+section.story-pay {
+    padding: 3rem 0;
+
+    .heading {
+        @extend .block-heading;
+    }
+
+    .row-modify {
+        padding-top: 3rem;
+
+        .list-pay {
+            @extend .list-pay;
+            padding-top: 0rem;
+        }
+    }
+
+    & .recommend {
+        padding-top: 1rem;
+
+        &::after {
+            display: none;
+        }
+
+        ul {
+            li {
+                .content {
+                    padding: .9rem 0 .9rem 1rem;
+
+                    @include response(md) {
+
+                        padding: .9rem 0 .9rem 0rem;
+                    }
+                }
+            }
+        }
+    }
+}

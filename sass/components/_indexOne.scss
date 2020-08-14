@@ -1,0 +1,48 @@
+.index-one {
+    min-height: 15rem;
+
+    & .index {
+        top: 2rem;
+        margin: 0;
+    }
+
+    & .info {
+        display: block;
+        max-width: 65%;
+
+        @include response(md) {
+            max-width: 83%;
+        }
+        @include response(sm) {
+            max-width: 62%;
+        }
+
+        & .view {
+            color: color(text-secondary);
+            margin-bottom: 1rem;
+
+            span {
+                @extend %text-red;
+            }
+        }
+
+        & .extra-info {
+            color: color(text-secondary);
+
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 0;
+
+                @include response(md) {
+                    font-size: 1.3rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: color(primary);
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}

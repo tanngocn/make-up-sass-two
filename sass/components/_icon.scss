@@ -1,0 +1,184 @@
+.icon,
+%icon {
+
+    @include styleDefaultIcon();
+}
+
+.block-icon {
+    height: 2.4rem;
+    width: 2rem;
+    display: inline-block;
+    line-height: 2.4rem;
+}
+
+.icon-fire,
+%icon-fire {
+    background-image: url(../../images/icon-fire.png);
+    @include sizeIconWH(2.5, 2.8);
+
+}
+
+.icon-close {
+    background-image: url(../../images/icon-close.png);
+    @include sizeIconWH(1.4, 1.4);
+
+}
+
+.icon-facebook {
+    background-image: url(../../images/icon-facebook.png);
+    @include sizeIconWH(1, 2.2);
+}
+
+.icon-star,
+%icon-star {
+    background-image: url(../images/icon-star.png);
+    @include sizeIconWH(2.3, 2.2);
+}
+
+.icon-warning {
+    background-image: url(../images/icon-warning.png);
+    @include sizeIconWH(2.2, 2.4);
+}
+
+.icon-faq {
+    background-image: url(../images/icon-upload.png);
+    @include sizeIconWH(2.4, 2.4);
+}
+
+.icon-email {
+    background-image: url(../images/icon-email.png);
+    @include sizeIconWH(2.4, 1.6);
+}
+
+.icon-phone {
+    background-image: url(../images/icon-phone.png);
+    @include sizeIconWH(1.4, 2.4);
+}
+
+.icon-skype {
+    background-image: url(../images/icon-skype.png);
+    @include sizeIconWH(2.4, 2.4);
+
+}
+
+// big icon
+.icon-cat-tien-hiep {
+    background-image: url(../images/icon-cat-tien-hiep.png);
+    @include sizeIconWH(7.6, 6.4);
+}
+
+.icon-cat-vong-du {
+    background-image: url(../images/icon-cat-vong-du.png);
+    @include sizeIconWH(7.6, 6.4);
+}
+
+.icon-cat-di-gioi {
+    background-image: url(../images/icon-cat-di-gioi.png);
+    @include sizeIconWH(7.6, 6.4);
+}
+
+.icon-cat-khoa-huyen {
+    background-image: url(../images/icon-cat-khoa-huyen.png);
+    @include sizeIconWH(7.6, 6.4);
+}
+
+.icon-cat-do-thi {
+    background-image: url(../images/icon-cat-do-thi.png);
+    @include sizeIconWH(7.6, 6.4);
+}
+
+.icon-cat-ngon-tinh {
+    background-image: url(../images/icon-cat-ngon-tinh.png);
+    @include sizeIconWH(7.6, 6.4);
+}
+
+.icon-user,
+%icon-user {
+    background-image: url(../../images/user.png);
+    @include sizeIconWH(2.4, 2.4);
+}
+
+.icon-search,
+%icon-search {
+    background-image: url(../../images/icon-search-primary.png);
+    @include sizeIconWH(2.4, 2.4);
+}
+
+%icon-prev {
+    background-image: url(../../images/icon-prev.png);
+    @include sizeIconWH(1, 1.7);
+}
+
+.icon-next, %icon-next {
+    background-image: url(../../images/icon-next.png);
+    @include sizeIconWH(1, 1.7);
+}
+
+.icon-search-white {
+    background-image: url(../../images/icon-search-white.png);
+    @include sizeIconWH(2.4, 2.4);
+}
+
+.icon-white-next {
+    background-image: url(../../images/icon-white-next.png);
+    @include sizeIconWH(1, 1.7);
+}
+
+.index,
+%index {
+    // top: 2rem;
+    // margin: 0;
+    width: 2.6rem;
+    height: 2.6rem;
+    line-height: 2.6rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    font-weight: 600;
+    text-align: center;
+    color: color(secondary);
+
+
+    &.index-star {
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+
+        &--1 {
+            color: color(white);
+            background-image: url(../../images/star1.png);
+        }
+
+        &--2 {
+            color: color(white);
+            background-image: url(../../images/star2.png);
+        }
+
+        &--3 {
+            color: color(white);
+            background-image: url(../../images/star3.png);
+        }
+    }
+
+}
+
+.index-1 {
+    background-color: color(yellow);
+    border-radius: 50%;
+}
+
+.index-2 {
+    background-color: color(blue);
+    border-radius: 50%;
+}
+
+.index-3 {
+    background-color: color(secondary);
+    border-radius: 50%;
+}

@@ -1,0 +1,37 @@
+main.main{
+
+    section.top-story {
+        padding: 6rem 0;
+        background-image: url(../../images/banner1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        position: relative;
+    
+        & .row {
+            background-color: transparent;
+    
+            .heading-nospace {
+                margin-bottom: 2rem;
+    
+                h2 {
+                    @extend %h2;
+                    @include flexPosition(flex-start);
+                    color: color(white);
+                }
+    
+                .icon {
+                    float: left;
+                    margin-right: 10px;
+                    position: relative;
+                }
+            }
+    
+            & .recommend {
+                padding: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.heading {
+
+    h2 {
+        @extend %h2;
+        color: color(primary);
+        @include flexPosition(space-between);
+        margin-bottom: .8rem;
+
+        a {
+            text-align: right;
+            display: block;
+            color: #777;
+            font-size: 1.56rem;
+        }
+    }
+
+}
+
+.heading-nospace {
+    h2 {
+        @extend %h2;
+        color: color(primary);
+        @include flexPosition(flex-start);
+        margin-bottom: .8rem;
+
+        a {
+            text-align: right;
+            display: block;
+            color: #777;
+            font-size: 1.56rem;
+        }
+    }
+}
+
+.block-heading {
+    @extend .heading;
+    border-bottom: .1rem solid #eee;
+}

@@ -1,0 +1,25 @@
+section.featured-block {
+
+
+  @include response(md) {
+    margin-top: 2rem;
+  }
+
+
+  .row {
+    background-color: color(white);
+
+    .block-slides {
+      @extend .block-slides;
+    }
+
+    & .block-editor {
+      @extend .block-editor;
+    }
+
+    .block-recommend {
+      @extend .recommend;
+    }
+
+  }
+}

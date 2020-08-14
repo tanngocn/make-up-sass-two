@@ -1,0 +1,7 @@
+.wrapper {
+    background-color: color(white);
+
+    .rank-block {
+        @extend .rank-block;
+    }
+}

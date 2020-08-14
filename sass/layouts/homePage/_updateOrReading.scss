@@ -1,0 +1,16 @@
+section.upDateReading {
+    padding: 3rem 0;
+
+    .heading {
+        @extend .block-heading;
+    }
+
+    ul.right {
+        @extend %list-story-update;
+        
+    }
+
+    ul {
+      @extend %ul;
+    }
+}

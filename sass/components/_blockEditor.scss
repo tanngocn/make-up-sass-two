@@ -1,0 +1,61 @@
+.block-editor {
+    .row {
+        border-bottom: .1rem solid #eee;
+        @include response(md) {
+            border-bottom: none;
+        }
+
+
+        .item {
+            height: 17.6rem;
+            padding: 0 .75rem;
+
+            @include response(md) {
+                height: 13.2rem;
+                padding: 0 1.5rem;
+                margin-bottom: 2.8rem;
+
+            }
+
+            @include response(sm) {
+                height: 12rem;
+                margin-bottom: 0;
+
+            }
+
+            .content {
+
+                @include response(sm) {
+
+                    border-bottom: .1rem dashed color(text-secondary);
+                    @include flexPosition(center, flex-start, column);
+                    padding: 1.5rem 0;
+
+                }
+
+                & h3 {
+                    @extend %h3
+                }
+
+                & .view {
+                    margin-bottom: .8rem;
+                    font-size: 1.4rem;
+                    color: color(text-secondary);
+                }
+
+                & p {
+                    font-size: 1.4rem;
+                    max-height: 7.2rem;
+                    overflow: hidden;
+                    line-height: 1.8rem;
+                    color: color(text-primary);
+
+                    @include response(sm) {
+
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
